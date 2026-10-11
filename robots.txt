@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kupie-siano.github.io/sitemap.xml
