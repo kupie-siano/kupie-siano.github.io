@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kupię siano w belach – poszukuję paszy dla zwierząt | Patryk Barżykowski</title>
+<meta name="description" content="Poszukuję paszy dla zwierząt: kupię siano w belach okrągłych Ø 1,20–1,50 m od pełnego auta (min. 44 bele Ø 1,20 m lub 40 bel Ø 1,30 m). Transport po mojej stronie. Tel. 666 658 020.">
+<meta name="theme-color" content="#DDEAEC">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:url" content="https://kupie-siano.github.io/">
+<meta property="og:title" content="Kupię siano w belach – pasza dla zwierząt">
+<meta property="og:description" content="Poszukuję paszy dla zwierząt. Kupię siano w belach od pełnego auta, transport po mojej stronie. Tel. 666 658 020.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23E1B44D'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23A57B1C' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='5' fill='none' stroke='%23A57B1C' stroke-width='2'/%3E%3C/svg%3E">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Układ: niebo + panorama łąki z pokosami i belami (jedyny mocny akcent), ogłoszenie z zrywkami na telefon nachodzi na łąkę;
+   niżej spokojne sekcje: średnice bel, SMS w telefonie, kroki z ikonami, ciemny pas kontaktu, pasek „Zadzwoń” na telefonach */
+:root {
+  --bg: #F3F6EE; --sky: #DDEAEC; --sun: #F3D47C; --surface: #FFFFFF; --paper: #FFFEF7; --soft: #E8EEDF;
+  --fg: #1E2A1B; --muted: #55614F; --line: #D2DAC6;
+  --accent: #3E6E21; --accent-ink: #FFFFFF;
+  --hay: #E1B44D; --hay-dark: #A57B1C; --hay-ink: #2B2108;
+  --m1: #A8C279; --m2: #BCD091; --m3: #CCDDB0; --trees: #86A660; --stripe: #97B467; --road: #E4E0CC;
+  --band: #22371A; --band-fg: #F1F4EA; --band-muted: #AFC0A0;
+  --pin: #C4452F; --shadow: rgba(30, 42, 27, .35);
+  --display: "Bahnschrift", "Avenir Next Condensed", "Arial Narrow", "sans-serif-condensed", "Roboto Condensed", sans-serif;
+  --body: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --mono: ui-monospace, Consolas, "SF Mono", "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121810; --sky: #18222B; --sun: #E8E2C4; --surface: #1B2318; --paper: #20281C; --soft: #192016;
+  --fg: #EBF0E2; --muted: #A1AD96; --line: #303C2A;
+  --accent: #8EC25C; --accent-ink: #121810;
+  --hay: #C9992F; --hay-dark: #86631A; --hay-ink: #1A1405;
+  --m1: #2D3F23; --m2: #25341E; --m3: #1E2B1D; --trees: #16200F; --stripe: #34482A; --road: #3A4031;
+  --band: #0C110A; --band-fg: #EBF0E2; --band-muted: #8E9C84;
+  --pin: #E06A52; --shadow: rgba(0, 0, 0, .6); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121810; --sky: #18222B; --sun: #E8E2C4; --surface: #1B2318; --paper: #20281C; --soft: #192016;
+  --fg: #EBF0E2; --muted: #A1AD96; --line: #303C2A;
+  --accent: #8EC25C; --accent-ink: #121810;
+  --hay: #C9992F; --hay-dark: #86631A; --hay-ink: #1A1405;
+  --m1: #2D3F23; --m2: #25341E; --m3: #1E2B1D; --trees: #16200F; --stripe: #34482A; --road: #3A4031;
+  --band: #0C110A; --band-fg: #EBF0E2; --band-muted: #8E9C84;
+  --pin: #E06A52; --shadow: rgba(0, 0, 0, .6); color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 400 1rem/1.6 var(--body); }
+.wrap { max-width: 70rem; margin: 0 auto; padding-inline: 20px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* przyciski */
+.btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--accent); color: var(--accent-ink);
+  font: 600 1rem/1.2 var(--body); padding: .85rem 1.4rem; border-radius: 6px; text-decoration: none; border: 0; cursor: pointer; }
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 2px var(--line); }
+.btn.hay { background: var(--hay); color: var(--hay-ink); }
+.btn.line { background: transparent; color: var(--band-fg); box-shadow: inset 0 0 0 2px var(--band-muted); }
+.btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.copy { font: 600 .9rem var(--body); background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: .6rem .9rem; cursor: pointer; }
+.actions { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
+
+/* niebo + nagłówek */
+.hero { background: var(--sky); overflow: hidden; }
+header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 16px; flex-wrap: wrap; }
+.brand { font: 700 1.3rem/1 var(--display); font-stretch: condensed; letter-spacing: .03em; text-transform: uppercase; display: flex; align-items: center; gap: .55rem; }
+.brand svg { width: 30px; height: 30px; flex: none; }
+.brand .dot { color: var(--accent); margin-inline: .35em; }
+.top .btn { padding: .55rem 1rem; }
+
+.hero .grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3.5rem; align-items: center; padding-block: 28px 0; }
+.hero .grid > * { min-width: 0; }
+.eyebrow { font: 600 .78rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font: 700 clamp(3rem, 8.5vw, 6rem)/.92 var(--display); font-stretch: condensed; text-transform: uppercase; margin: .7rem 0 1.1rem; text-wrap: balance; letter-spacing: -.005em; }
+h1 em { font-style: normal; color: var(--accent); display: block; }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 32rem; margin: 0 0 1.7rem; }
+
+/* ogłoszenie z zrywkami */
+.notice { position: relative; z-index: 1; background: var(--paper); padding: 1.7rem 1.5rem 0; border-radius: 2px;
+  box-shadow: 0 1px 0 var(--line), 0 22px 34px -20px var(--shadow); max-width: 26rem; justify-self: center; width: 100%; box-sizing: border-box; }
+.pin { position: absolute; top: -9px; left: 50%; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: var(--pin); box-shadow: 0 3px 4px var(--shadow); }
+.notice h2 { font: 700 1.45rem/1 var(--display); font-stretch: condensed; text-transform: uppercase; letter-spacing: .04em; margin: 0 0 .8rem; }
+.notice dl { display: grid; grid-template-columns: auto 1fr; margin: 0; }
+.notice dt, .notice dd { padding: .5rem 0; border-top: 1px dashed var(--line); margin: 0; }
+.notice dt { color: var(--muted); font-size: .85rem; padding-right: 1rem; }
+.notice dd { font: 500 .9rem/1.4 var(--mono); text-align: right; }
+.tabs { display: grid; grid-template-columns: repeat(6, 1fr); margin: 1.1rem -1.5rem 0; border-top: 1.5px dashed var(--muted); }
+.tabs > * { writing-mode: vertical-rl; transform: rotate(180deg); display: flex; align-items: center; justify-content: center;
+  padding: 1rem 0; font: 700 1rem/1 var(--mono); letter-spacing: .03em; color: var(--fg); }
+
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 20;
+  width: max-content; max-width: calc(100% - 32px); box-sizing: border-box; background: var(--fg); color: var(--bg);
+  padding: .85rem 1.2rem; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 14px 28px -12px var(--shadow); }
+.tabs > * + * { border-right: 1.5px dashed var(--muted); }
+.tabs .gone { color: transparent; }
+
+/* panorama */
+.scene { display: block; width: 100%; height: clamp(190px, 27vw, 380px); }
+.scene .sun { fill: var(--sun); } .scene .m1 { fill: var(--m1); } .scene .m2 { fill: var(--m2); } .scene .m3 { fill: var(--m3); }
+.scene .trees { fill: var(--trees); } .scene .stripe { fill: var(--stripe); }
+.scene .road { fill: none; stroke: var(--road); stroke-width: 7; stroke-linecap: round; }
+.scene .shadow { fill: var(--fg); opacity: .14; }
+.scene .t-body { fill: var(--surface); stroke: var(--fg); stroke-width: 1.2; } .scene .t-cab { fill: var(--accent); } .scene .t-ink { fill: var(--fg); }
+@media (prefers-reduced-motion: no-preference) {
+  .scene .roll { transform-box: fill-box; transform-origin: center; animation: roll 1.4s cubic-bezier(.2, .7, .2, 1) both; }
+  .scene .roll.d2 { animation-delay: .15s; } .scene .roll.d3 { animation-delay: .3s; }
+  @keyframes roll { from { transform: translateX(-90px) rotate(-200deg); } to { transform: none; } }
+  .scene .drive { animation: drive 4.5s cubic-bezier(.25, .6, .3, 1) both; }
+  @keyframes drive { from { transform: translateX(-380px); } to { transform: none; } }
+}
+
+/* sekcje */
+section.block { padding-block: 64px; }
+section.tint { background: var(--soft); }
+h2.sec { font: 700 clamp(1.9rem, 4.5vw, 2.8rem)/1 var(--display); font-stretch: condensed; text-transform: uppercase; margin: .5rem 0 .8rem; text-wrap: balance; }
+.intro { color: var(--muted); margin: 0 0 2rem; max-width: 40rem; }
+
+/* średnice */
+.sizes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.size { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.3rem 1.2rem; display: grid; gap: .6rem; justify-items: start; min-width: 0; }
+.size svg { height: 60px; width: auto; display: block; }
+.size .d { font: 700 2.1rem/1 var(--display); font-stretch: condensed; font-variant-numeric: tabular-nums; }
+.size .min { font: 600 .85rem/1.2 var(--body); color: var(--accent); background: var(--soft); border-radius: 999px; padding: .35rem .7rem; }
+.size .min.open { color: var(--muted); }
+
+/* co podać + telefon */
+.info { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; }
+.info > * { min-width: 0; }
+ul.need { list-style: none; padding: 0; margin: 0; display: grid; }
+ul.need li { display: grid; grid-template-columns: 2rem 1fr; gap: .6rem; padding: .85rem 0; border-top: 1px solid var(--line); }
+ul.need li:last-child { border-bottom: 1px solid var(--line); }
+ul.need li::before { content: ""; width: 1.25rem; height: 1.25rem; margin-top: .15rem; border-radius: 50%; background: var(--hay);
+  box-shadow: inset 0 0 0 3px var(--hay), inset 0 0 0 4.5px var(--hay-dark); }
+ul.need b { display: block; }
+ul.need span { color: var(--muted); font-size: .95rem; }
+
+.phonebox { display: grid; gap: 1rem; justify-items: center; }
+.phone { width: 100%; max-width: 320px; box-sizing: border-box; background: var(--surface); border: 10px solid var(--fg); border-radius: 36px; padding: 0 0 1.2rem; overflow: hidden;
+  box-shadow: 0 30px 40px -28px var(--shadow); }
+.ph-top { display: flex; align-items: center; gap: .7rem; padding: 1.4rem 1rem .8rem; border-bottom: 1px solid var(--line); position: relative; }
+.ph-top::before { content: ""; position: absolute; top: .45rem; left: 50%; width: 70px; height: 6px; margin-left: -35px; border-radius: 6px; background: var(--line); }
+.avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--hay); color: var(--hay-ink); display: grid; place-items: center; font: 700 .85rem var(--body); flex: none; }
+.ph-top b { display: block; font-size: .95rem; line-height: 1.2; }
+.ph-top span { font: 500 .8rem var(--mono); color: var(--muted); }
+.ph-body { padding: 1.1rem .9rem 0; display: grid; gap: .4rem; }
+.bubble { margin: 0 0 0 auto; max-width: 88%; background: var(--accent); color: var(--accent-ink); border-radius: 18px 18px 4px 18px;
+  padding: .8rem 1rem; font: 500 .9rem/1.55 var(--body); white-space: pre-wrap; }
+.ph-hint { justify-self: end; font-size: .75rem; color: var(--muted); }
+
+/* kroki */
+ol.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; counter-reset: s; }
+ol.steps li { counter-increment: s; position: relative; min-width: 0; display: grid; gap: .35rem; align-content: start; }
+ol.steps li:not(:last-child)::after { content: ""; position: absolute; top: 28px; left: 68px; right: calc(-1.5rem + 10px); border-top: 2px dashed var(--line); }
+.ico { width: 56px; height: 56px; border-radius: 50%; background: var(--surface); border: 2px solid var(--line); display: grid; place-items: center; position: relative; margin-bottom: .5rem; box-sizing: border-box; }
+.ico svg { width: 26px; height: 26px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ico::after { content: counter(s); position: absolute; top: -6px; right: -6px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--hay); color: var(--hay-ink); font: 700 .75rem/22px var(--body); text-align: center; }
+ol.steps b { font-size: 1.05rem; }
+ol.steps span { color: var(--muted); }
+
+/* kontakt */
+.band { background: var(--band); color: var(--band-fg); padding-block: 72px; }
+.band .eyebrow { color: var(--band-muted); }
+.band h2.sec { color: var(--band-fg); }
+.bignum { display: inline-block; font: 700 clamp(2.8rem, 10vw, 6.2rem)/1 var(--display); font-stretch: condensed; color: var(--hay);
+  text-decoration: none; letter-spacing: .01em; margin: .3rem 0 1.4rem; font-variant-numeric: tabular-nums; }
+.band .copy { color: var(--band-fg); border-color: var(--band-muted); }
+.mailrow { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid color-mix(in srgb, var(--band-muted) 35%, transparent); }
+.mailrow .lbl { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--band-muted); font-weight: 600; }
+.mailrow #mail { font: 600 1.15rem var(--mono); word-break: break-all; }
+.mailrow a { color: var(--hay); font-weight: 600; }
+.who { color: var(--band-muted); margin: 1.2rem 0 0; }
+
+footer { padding-block: 26px; color: var(--muted); font-size: .85rem; }
+footer .wrap { display: grid; gap: .4rem; }
+
+/* pasek szybkiego kontaktu na telefonach */
+.callbar { display: none; }
+
+@media (max-width: 900px) {
+  .hero .grid, .info { grid-template-columns: 1fr; gap: 2.5rem; }
+  .notice { justify-self: start; }
+  .sizes { grid-template-columns: 1fr 1fr; }
+  ol.steps { grid-template-columns: 1fr; gap: 1.5rem; }
+  ol.steps li { grid-template-columns: 56px 1fr; column-gap: 1rem; }
+  ol.steps li .ico { grid-row: span 2; margin-bottom: 0; }
+  ol.steps li:not(:last-child)::after { top: 62px; left: 27px; right: auto; bottom: calc(-1.5rem + 6px); border-top: 0; border-left: 2px dashed var(--line); }
+}
+@media (min-width: 901px) {
+  .notice { margin-bottom: -96px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding-inline: 16px; }
+  body { padding-bottom: 76px; }
+  .callbar { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line); }
+  .callbar .btn { justify-content: center; }
+  .top .btn { display: none; }
+  .toast { bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 380px) {
+  .sizes { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="hero">
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <svg viewBox="-50 -50 100 100" aria-hidden="true"><use href="#bale" x="-50" y="-50" width="100" height="100"/></svg>
+        <span>Kupię siano<span class="dot">·</span>Cała Polska</span>
+      </div>
+      <a class="btn" href="#kontakt">Kontakt</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <p class="eyebrow">Dla rolników i gospodarstw</p>
+        <h1>Kupię <em>siano w belach</em></h1>
+        <p class="lead">Poszukuję paszy dla zwierząt, przede wszystkim siana w belach okrągłych. Kupuję od pełnego auta, a transport organizuję sam. Zadzwoń albo wyślij SMS-a z informacją, ile masz bel i gdzie.</p>
+        <div class="actions">
+          <a class="btn" href="tel:+48666658020"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>666 658 020</a>
+          <a class="btn ghost" href="#co-podac">Co podać w wiadomości</a>
+        </div>
+      </div>
+
+      <aside class="notice" aria-label="Ogłoszenie: czego szukam">
+        <span class="pin" aria-hidden="true"></span>
+        <h2>Czego szukam</h2>
+        <dl>
+          <dt>Towar</dt><dd>siano, pasza dla zwierząt</dd>
+          <dt>Bele</dt><dd>okrągłe, Ø 1,20–1,50 m</dd>
+          <dt>Ilość</dt><dd>od pełnego auta</dd>
+          <dt>Skąd</dt><dd>cała Polska</dd>
+          <dt>Transport</dt><dd>po mojej stronie</dd>
+          <dt>Cena</dt><dd>do uzgodnienia</dd>
+          <dt>Płatność</dt><dd>przed załadunkiem</dd>
+        </dl>
+        <div class="tabs" aria-hidden="true">
+          <span>666 658 020</span>
+          <span>666 658 020</span>
+          <span class="gone">666 658 020</span>
+          <span>666 658 020</span>
+          <span>666 658 020</span>
+          <span>666 658 020</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <svg class="scene" viewBox="0 0 1200 330" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Łąka z pokosami i okrągłymi belami siana, w oddali ciężarówka na drodze">
+    <defs>
+      <symbol id="bale" viewBox="-50 -50 100 100">
+        <circle r="48" style="fill: var(--hay)"/>
+        <circle r="47" style="fill: none; stroke: var(--hay-dark); stroke-width: 3"/>
+        <path d="M3.0 0.0 L3.3 0.5 L3.4 1.1 L3.5 1.8 L3.4 2.5 L3.2 3.2 L2.8 3.8 L2.3 4.5 L1.7 5.1 L0.9 5.6 L0.0 5.9 L-1.0 6.1 L-2.0 6.2 L-3.1 6.1 L-4.2 5.7 L-5.2 5.2 L-6.2 4.5 L-7.1 3.6 L-7.9 2.6 L-8.5 1.3 L-8.9 0.0 L-9.0 -1.4 L-9.0 -2.9 L-8.7 -4.4 L-8.1 -5.9 L-7.3 -7.3 L-6.2 -8.6 L-5.0 -9.7 L-3.5 -10.7 L-1.8 -11.4 L-0.0 -11.8 L1.9 -11.9 L3.8 -11.8 L5.7 -11.3 L7.6 -10.5 L9.4 -9.4 L11.0 -8.0 L12.3 -6.3 L13.4 -4.4 L14.2 -2.3 L14.7 -0.0 L14.8 2.3 L14.6 4.7 L13.9 7.1 L12.9 9.3 L11.4 11.4 L9.7 13.3 L7.6 14.9 L5.3 16.2 L2.7 17.1 L0.0 17.6 L-2.8 17.7 L-5.6 17.3 L-8.4 16.5 L-11.1 15.2 L-13.5 13.5 L-15.7 11.4 L-17.5 8.9 L-19.0 6.2 L-20.0 3.2 L-20.6 0.0 L-20.6 -3.3 L-20.1 -6.5 L-19.1 -9.7 L-17.6 -12.8 L-15.6 -15.6 L-13.1 -18.1 L-10.3 -20.2 L-7.1 -21.8 L-3.6 -22.9 L-0.0 -23.5 L3.7 -23.5 L7.4 -22.9 L11.1 -21.7 L14.5 -20.0 L17.7 -17.7 L20.4 -14.8 L22.8 -11.6 L24.6 -8.0 L25.8 -4.1 L26.4 -0.0 L26.4 4.2 L25.7 8.3 L24.3 12.4 L22.3 16.2 L19.7 19.7 L16.6 22.8 L12.9 25.4 L8.9 27.4 L4.5 28.7 L0.0 29.4 L-4.6 29.3 L-9.3 28.5 L-13.7 26.9 L-17.9 24.7 L-21.8 21.8 L-25.2 18.3 L-28.0 14.3 L-30.1 9.8 L-31.6 5.0 L-32.3 0.0 L-32.2 -5.1 L-31.3 -10.2 L-29.5 -15.1 L-27.1 -19.7 L-23.9 -23.9 L-20.0 -27.5 L-15.6 -30.6 L-10.7 -32.9 L-5.5 -34.5 L0.0 -35.2 L5.6 -35.1 L11.1 -34.0 L16.4 -32.2 L21.4 -29.4 L25.9 -25.9 L29.9 -21.7 L33.2 -16.9 L35.7 -11.6 L37.4 -5.9 L38.1 -0.0 L38.0 6.0 L36.8 12.0 L34.8 17.7 L31.8 23.1 L28.0 28.0 L23.5 32.3 L18.2 35.8 L12.5 38.5 L6.4 40.3 L-0.0 41.1 L-6.5 40.9 L-12.9 39.6 L-19.0 37.4 L-24.8 34.2 L-30.1 30.1 L-34.6 25.2 L-38.4 19.6 L-41.3 13.4 L-43.2 6.8 L-44.0 0.0" style="fill: none; stroke: var(--hay-dark); stroke-width: 2.6; opacity: .75; stroke-linecap: round; stroke-linejoin: round"/>
+      </symbol>
+      <clipPath id="near"><path d="M0 262 C250 248 500 252 700 255 C900 258 1050 250 1200 256 V330 H0 Z"/></clipPath>
+    </defs>
+
+    <circle class="sun" cx="980" cy="72" r="36"/>
+
+    <g class="trees">
+      <circle cx="110" cy="166" r="10"/><circle cx="125" cy="161" r="13"/><circle cx="141" cy="166" r="9"/>
+      <circle cx="668" cy="150" r="11"/><circle cx="685" cy="144" r="14"/><circle cx="703" cy="148" r="10"/>
+      <circle cx="758" cy="143" r="12"/><circle cx="775" cy="137" r="15"/><circle cx="793" cy="143" r="10"/>
+    </g>
+    <path class="m3" d="M0 182 C140 150 290 160 420 172 C560 186 650 138 800 146 C950 154 1060 130 1200 146 V330 H0 Z"/>
+    <path class="m2" d="M0 222 C220 204 420 214 620 210 C840 206 1010 198 1200 208 V330 H0 Z"/>
+    <path class="road" d="M-10 240 C260 226 560 228 820 232 S1100 236 1210 230"/>
+
+    <g transform="translate(330 213)"><g class="drive">
+      <rect class="t-body" x="0" y="0" width="56" height="14" rx="1"/>
+      <path class="t-cab" d="M58 15 V4 Q58 2 60 2 H67 Q70 2 71 5 L73 10 V15 Z"/>
+      <rect class="t-ink" x="-1" y="14" width="74" height="2.5"/>
+      <circle class="t-ink" cx="8" cy="18" r="3"/><circle class="t-ink" cx="15" cy="18" r="3"/>
+      <circle class="t-ink" cx="60" cy="18" r="3"/><circle class="t-ink" cx="69" cy="18" r="3"/>
+    </g></g>
+
+    <path class="m1" d="M0 262 C250 248 500 252 700 255 C900 258 1050 250 1200 256 V330 H0 Z"/>
+    <g clip-path="url(#near)">
+      <polygon class="stripe" points="515,255 517,255 -408,330 -432,330"/>
+      <polygon class="stripe" points="529,255 531,255 -238,330 -262,330"/>
+      <polygon class="stripe" points="543,255 545,255 -68,330 -92,330"/>
+      <polygon class="stripe" points="557,255 559,255 102,330 78,330"/>
+      <polygon class="stripe" points="571,255 573,255 272,330 248,330"/>
+      <polygon class="stripe" points="585,255 587,255 442,330 418,330"/>
+      <polygon class="stripe" points="599,255 601,255 612,330 588,330"/>
+      <polygon class="stripe" points="613,255 615,255 782,330 758,330"/>
+      <polygon class="stripe" points="627,255 629,255 952,330 928,330"/>
+      <polygon class="stripe" points="641,255 643,255 1122,330 1098,330"/>
+      <polygon class="stripe" points="655,255 657,255 1292,330 1268,330"/>
+      <polygon class="stripe" points="669,255 671,255 1462,330 1438,330"/>
+      <polygon class="stripe" points="683,255 685,255 1632,330 1608,330"/>
+    </g>
+
+    <g>
+      <ellipse class="shadow" cx="600" cy="270" rx="9" ry="1.5"/><use href="#bale" x="592" y="254" width="16" height="16"/>
+      <ellipse class="shadow" cx="520" cy="277" rx="12" ry="2"/><use href="#bale" x="509" y="255" width="22" height="22"/>
+      <ellipse class="shadow" cx="690" cy="280" rx="13" ry="2"/><use href="#bale" x="678" y="256" width="24" height="24"/>
+      <ellipse class="shadow" cx="450" cy="292" rx="17" ry="2.5"/><use href="#bale" x="434" y="260" width="32" height="32"/>
+      <ellipse class="shadow" cx="762" cy="295" rx="18" ry="2.5"/><use href="#bale" x="745" y="261" width="34" height="34"/>
+      <ellipse class="shadow" cx="1080" cy="294" rx="23" ry="3"/><use href="#bale" x="1058" y="250" width="44" height="44"/>
+      <ellipse class="shadow" cx="1010" cy="310" rx="31" ry="4"/><use href="#bale" x="980" y="250" width="60" height="60"/>
+      <ellipse class="shadow" cx="330" cy="310" rx="27" ry="4"/><use href="#bale" x="304" y="258" width="52" height="52"/>
+      <ellipse class="shadow" cx="262" cy="328" rx="38" ry="5"/><use class="roll d2" href="#bale" x="226" y="256" width="72" height="72"/>
+      <ellipse class="shadow" cx="170" cy="328" rx="44" ry="5"/><use class="roll" href="#bale" x="128" y="244" width="84" height="84"/>
+      <ellipse class="shadow" cx="930" cy="328" rx="40" ry="5"/><use class="roll d3" href="#bale" x="892" y="252" width="76" height="76"/>
+    </g>
+  </svg>
+</div>
+
+<main>
+  <section class="block" id="bele">
+    <div class="wrap">
+      <p class="eyebrow">Średnice</p>
+      <h2 class="sec">Jakie bele kupuję</h2>
+      <p class="intro">Siano w belach okrągłych. Minimum to jedno pełne auto.</p>
+      <div class="sizes">
+        <div class="size">
+          <svg viewBox="-50 -50 100 100" style="height: 48px" aria-hidden="true"><use href="#bale" x="-50" y="-50" width="100" height="100"/></svg>
+          <span class="d">Ø 1,20 m</span><span class="min">min. 44 szt.</span>
+        </div>
+        <div class="size">
+          <svg viewBox="-50 -50 100 100" style="height: 52px" aria-hidden="true"><use href="#bale" x="-50" y="-50" width="100" height="100"/></svg>
+          <span class="d">Ø 1,30 m</span><span class="min">min. 40 szt.</span>
+        </div>
+        <div class="size">
+          <svg viewBox="-50 -50 100 100" style="height: 56px" aria-hidden="true"><use href="#bale" x="-50" y="-50" width="100" height="100"/></svg>
+          <span class="d">Ø 1,40 m</span><span class="min open">ilość do uzgodnienia</span>
+        </div>
+        <div class="size">
+          <svg viewBox="-50 -50 100 100" style="height: 60px" aria-hidden="true"><use href="#bale" x="-50" y="-50" width="100" height="100"/></svg>
+          <span class="d">Ø 1,50 m</span><span class="min open">ilość do uzgodnienia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="co-podac">
+    <div class="wrap info">
+      <div>
+        <p class="eyebrow">Zanim zadzwonisz</p>
+        <h2 class="sec">Co podać w wiadomości</h2>
+        <p class="intro">Im więcej konkretów, tym szybciej podam cenę i termin odbioru.</p>
+        <ul class="need">
+          <li><div><b>Kod pocztowy</b><span>i czy tir z naczepą dojedzie na miejsce załadunku.</span></div></li>
+          <li><div><b>Liczba bel i wielkość</b><span>np. 44 bele, 120 cm.</span></div></li>
+          <li><div><b>Rok zbioru i pokos</b><span>pierwszy, drugi czy trzeci.</span></div></li>
+          <li><div><b>Przechowywanie</b><span>pod dachem, w folii czy na polu.</span></div></li>
+          <li><div><b>Twoja cena za belę</b><span>jeśli już ją masz.</span></div></li>
+          <li><div><b>Zdjęcia</b><span>SMS-em albo mailem, z bliska i całego stosu.</span></div></li>
+        </ul>
+      </div>
+
+      <div class="phonebox">
+        <div class="phone" aria-label="Wzór SMS-a">
+          <div class="ph-top">
+            <span class="avatar" aria-hidden="true">PB</span>
+            <div><b>Patryk · siano i pasza</b><span>666 658 020</span></div>
+          </div>
+          <div class="ph-body">
+<p class="bubble" id="smsText">Dzień dobry, mam siano na sprzedaż.
+Kod pocztowy:
+Liczba bel:
+Wielkość bel (np. 120):
+Rok zbioru / pokos:
+Przechowywanie:
+Cena za belę:</p>
+            <span class="ph-hint">Uzupełnij i wyślij</span>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="sms:+48666658020">Wyślij SMS</a>
+          <button class="copy" type="button" data-copy="smsText">Kopiuj wzór</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="jak">
+    <div class="wrap">
+      <p class="eyebrow">Krok po kroku</p>
+      <h2 class="sec">Jak wygląda sprzedaż</h2>
+      <p class="intro">Bez pośredników: rozmawiasz bezpośrednio ze mną.</p>
+      <ol class="steps">
+        <li>
+          <span class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+          <b>Kontakt</b><span>Dzwonisz albo piszesz, ile masz siana i gdzie.</span>
+        </li>
+        <li>
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7H8l1.5-2.5h5L16 7h3.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+          <b>Wycena</b><span>Oglądam zdjęcia, ustalamy cenę za belę i termin odbioru.</span>
+        </li>
+        <li>
+          <span class="ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.8"/><path d="M6 9.5v5M18 9.5v5"/></svg></span>
+          <b>Płatność</b><span>Płacę za siano przed załadunkiem.</span>
+        </li>
+        <li>
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M2 6h12v10H2z"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+          <b>Załadunek</b><span>Podstawiam auto w umówionym terminie i ładujemy.</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="kontakt">
+    <div class="wrap">
+      <p class="eyebrow">Kontakt</p>
+      <h2 class="sec">Masz siano na sprzedaż?</h2>
+      <a class="bignum" href="tel:+48666658020" id="tel">666 658 020</a>
+      <div class="actions">
+        <a class="btn hay" href="tel:+48666658020"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Zadzwoń</a>
+        <a class="btn line" href="sms:+48666658020">Wyślij SMS</a>
+        <button class="copy" type="button" data-copy="tel">Kopiuj numer</button>
+      </div>
+      <div class="mailrow">
+        <span class="lbl">E-mail</span>
+        <span id="mail">patryk.barz@o2.pl</span>
+        <a href="mailto:patryk.barz@o2.pl?subject=Siano%20na%20sprzeda%C5%BC">Napisz</a>
+        <button class="copy" type="button" data-copy="mail">Kopiuj adres</button>
+      </div>
+      <p class="who">Patryk Barżykowski · poszukuję paszy dla zwierząt</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Kupię siano w belach · pasza dla zwierząt · Patryk Barżykowski</span>
+    <span>Prywatność: strona nie używa plików cookie, formularzy ani narzędzi analitycznych i nie zbiera danych odwiedzających. Serwer hostingu może zapisywać standardowe logi techniczne.</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Szybki kontakt">
+  <a class="btn" href="tel:+48666658020"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Zadzwoń</a>
+  <a class="btn ghost" href="sms:+48666658020">SMS</a>
+</nav>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+// Linki tel:/sms: działają tylko na telefonie. Na komputerze (i w podglądzie) zamiast pustej strony pokazujemy numer i kopiujemy go.
+(function () {
+  var inFrame = window.self !== window.top;
+  var phoneLike = window.matchMedia && matchMedia('(pointer: coarse)').matches;
+  var toast = document.getElementById('toast'), timer;
+  function show(msg) { toast.textContent = msg; toast.hidden = false; clearTimeout(timer); timer = setTimeout(function () { toast.hidden = true; }, 4000); }
+  function tell(msg, text) {
+    show(msg);
+    try { navigator.clipboard.writeText(text).then(function () { show(msg + ' Skopiowano.'); }, function () {}); } catch (e) {}
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]');
+    if (!a) return;
+    var mail = a.getAttribute('href').indexOf('mailto:') === 0;
+    if (!inFrame && (mail || phoneLike)) return;
+    e.preventDefault();
+    if (mail) tell('E-mail: patryk.barz@o2.pl', 'patryk.barz@o2.pl');
+    else tell('Telefon: 666 658 020. Zadzwoń lub wyślij SMS z komórki.', '666 658 020');
+  });
+})();
+
+document.querySelectorAll('.copy').forEach(function (b) {
+  var label = b.textContent;
+  b.addEventListener('click', function () {
+    var el = document.getElementById(b.dataset.copy), t = el.textContent;
+    var done = function () { b.textContent = 'Skopiowano'; setTimeout(function () { b.textContent = label; }, 1500); };
+    var pick = function () { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(t).then(done, pick); } catch (e) { pick(); }
+  });
+});
+</script>
+</body>
+</html>
